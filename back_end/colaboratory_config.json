@@ -1,0 +1,1 @@
+{"rnn_layers": 3, "rnn_size": 256, "rnn_bidirectional": false, "max_length": 8, "max_words": 10000, "dim_embeddings": 100, "word_level": true, "single_text": true, "name": "colaboratory", "train_size": 0.8, "is_csv": false}

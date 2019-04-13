@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div>
+    <!-- header -->
+    <nav class="navbar navbar-color">
+      <a class="navbar-brand mb-0 h1" routerLink='/'>CodeRev</a>
+    </nav>
+  </div>
+  <div class="head-wrapper">
+    <div class="container text-center p-3">
+      <div class="header">
+        Review Generated
+      </div>
+    </div>
+  </div>
+  <div class="body" *ngFor="let review of review$">
+    <!-- <div class="col-sm-6"></div> -->
+    <!-- <div class="col-sm-6"> -->
+      <div class="container text-center p-2">
+        <div class="row">
+          <div class="card text-white bg-dark mb-3">
+              <div class="card-body">
+              {{ review.text }}
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="container text-center">
+      <div class="body" *ngIf="review.code">
+        {{ review$[0].code }}
+      </div>
+    </div> -->
+  </div>
+</div>

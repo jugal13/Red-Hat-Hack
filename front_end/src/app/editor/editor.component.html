@@ -1,0 +1,71 @@
+<div>
+  <!-- header -->
+  <nav class="navbar navbar-color">
+      <a class="navbar-brand mb-0 h1" routerLink='/'>CodeRev</a>
+  </nav>
+</div>
+<div>
+  <!-- header -->
+  <nav class="navbar navbar-light bg-light ">
+    <div class="container text-center p-2 ">
+      <span class="mx-auto text-bold">Code Editor</span>
+    </div>
+    <select (change)="selectLang($event)">
+      <option value="java">Java</option>
+      <option value="c_cpp">C/C++</option>
+      <option value="javascript">JavaScript</option>
+    </select>
+  </nav>
+</div>
+
+<div class="container h-100 mt-4">
+  <!-- the code editor -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="code-editor" #codeEditor></div>
+    </div>
+  </div>
+
+  <!-- run, clear & beautify buttons -->
+  <div class="row mb-4 justify-content-center mx-4">
+    <div class="col-4 col-lg-2 col-md-3 col-sm-4 w-75">
+      <button type="button" class="btn btn-dark btn-sm btn-block px-4 mx-2" (click)="consoleCode()">
+        Display
+      </button>
+    </div>
+    <!-- <div class="col-4 col-lg-2 col-md-3 col-sm-4 w-75">
+      <button
+        type="button"
+        class="btn btn-primary btn-sm btn-block px-4 mx-2"
+        (click)="consoleCode()"
+      >
+        Clear
+      </button> -->
+    <!-- </div> -->
+    <div class="col-4 col-lg-2 col-md-3 col-sm-4 w-75">
+      <button type="button" class="btn btn-beautify btn-sm btn-block px-4 mx-2" (click)="beautifyContent()">
+        Beautify
+      </button>
+    </div>
+  </div>
+
+  <!-- output box -->
+  <div class="row mt-4">
+    <div class="col">
+      <div class="label-box border">
+        <span class="mx-4 font-weight-light">Output</span>
+      </div>
+      <textarea class="form-control output" rows="6" disabled="true" aria-label="output-textarea">
+        {{ code }}
+      </textarea>
+    </div>
+  </div>
+
+  <div class="row m-4 justify-content-center">
+    <div class="col-4 col-lg-2 col-md-3 col-sm-4 w-75">
+      <button type="button" class="btn btn-dark btn-sm btn-block px-4 mx-2" (click)="postCodeReview()">
+        Review
+      </button>
+    </div>
+  </div>
+</div>
